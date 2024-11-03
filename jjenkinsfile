@@ -1,0 +1,35 @@
+pipeline {
+  agent any
+  stages {
+
+    stage('Git') {
+       steps {
+        echo 'Pulling...' 
+       // git branch: 'omran-khd',
+      //  url : 'https://github.com/OmranKhad/Devops-test.git'
+      }
+    }
+      
+    stage('MVN Clean') {
+       steps {
+        echo 'Clean...' 
+        //sh "mvn clean"      
+      }
+    }
+
+      stage('MVN Compile') {
+       steps {
+        echo 'Compile...' 
+      //  sh "mvn compile"      
+      }
+    }
+    
+    stage('MVN Package') {
+      steps {
+        echo 'Package...' 
+      //  sh "mvn package"      
+      }
+    }
+
+}
+}
