@@ -5,7 +5,7 @@ pipeline {
     stage('Git') {
        steps {
         echo 'Pulling...' 
-       // git branch: 'omran-khd',
+       // git branch: 'main',
       //  url : 'https://github.com/OmranKhad/Devops-test.git'
       }
     }
