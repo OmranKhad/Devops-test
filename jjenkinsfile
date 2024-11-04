@@ -5,9 +5,9 @@ pipeline {
     stage('Git') {
        steps {
         echo 'Pulling...' 
-        git branch: 'main',
-        url : 'https://github.com/nerminetarhouni1/tpGit.git'
-      }
+        git branch: 'KhaledZemzari',
+        url : 'https://github.com/zemz-dot/tp-foyer.git'
+}
     }
       
     stage('MVN Clean') {
