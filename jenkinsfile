@@ -78,7 +78,11 @@ pipeline {
  //           }
  //           }
  //       }
-
+stage('Network scan') {
+            steps {
+                sh "sudo nmap -F localhost"
+            }
+        }
  stage('build hello') {
              steps {
                   script{
