@@ -84,11 +84,12 @@ stage('Network scan') {
                 sh "sudo nmap -F localhost"
             }
         }
- stage('Network ') {
+stage('gauntlt') {
                     steps {
                         sh "gauntlt"
                     }
                 }
+
  stage('build hello') {
              steps {
                   script{
