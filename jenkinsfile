@@ -84,11 +84,12 @@ stage('Network scan') {
                 sh "sudo nmap -F localhost"
             }
         }
-stage('gauntlt') {
-                    steps {
-                        sh "gauntlt"
-                    }
-                }
+stage('trivy scan') {
+            steps {
+                sh "sudo trivy image -o trivyreport.txt omrankhd/tp-foyer:${BUILD_ID}"
+                sh "cat trivyreport.txt"
+            }
+        }
 
  stage('build hello') {
              steps {
