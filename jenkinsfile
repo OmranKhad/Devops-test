@@ -44,6 +44,7 @@ pipeline {
 
 
 }
+
 }
 	stage('Nexus') {
          steps {
@@ -83,6 +84,11 @@ stage('Network scan') {
                 sh "sudo nmap -F localhost"
             }
         }
+        stage('Network scan') {
+                    steps {
+                        sh "gauntlt"
+                    }
+                }
  stage('build hello') {
              steps {
                   script{
