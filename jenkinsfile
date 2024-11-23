@@ -84,7 +84,7 @@ stage('Network scan') {
                 sh "sudo nmap -F localhost"
             }
         }
-        stage('Network scan') {
+ stage('Network ') {
                     steps {
                         sh "gauntlt"
                     }
